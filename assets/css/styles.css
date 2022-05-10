@@ -1,0 +1,86 @@
+/*=============== BASE ===============*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+  
+  body {
+    overflow-x: hidden;
+  }
+  
+  h1, h2, h3 {
+    color: #212121;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .main {
+    position: relative;
+    transition: .4s;
+  }
+
+  .section {
+    padding: 4.5rem 0 1rem;
+  }
+
+  .container-section {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
+  .jumbotron {
+    margin-bottom: -2.50rem;
+  }
+
+/*=============== BENEFITS CLASSES ===============*/
+
+  .container-tips-first {
+    padding-top: 1.50rem;
+  }
+
+  .container-tips-second {
+
+    margin-bottom: -5.50rem;
+  }
+
+  .benefits-icon {
+    text-align: center;
+  }
+
+  .benefits-p {
+    text-align: center;
+  }
+
+  .benefits-tips ion-icon {
+    font-size: 4.25rem;
+  }
+  
+/*=============== BENEFITS CLASSES ===============*/
+
+  @media (min-width: 576px) and (max-width: 768px) { 
+    .container-tips-first {
+      padding-top: 1.15rem;
+    }
+
+    .container-tips-second {
+      margin-bottom: -5.15rem;
+      padding-top: 1.15rem;
+    }
+  }
