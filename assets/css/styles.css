@@ -56,7 +56,6 @@
   }
 
   .container-tips-second {
-
     margin-bottom: -5.50rem;
   }
 
@@ -71,16 +70,73 @@
   .benefits-tips ion-icon {
     font-size: 4.25rem;
   }
+
+/*=============== SERVICES CLASSES ===============*/
+
+  .container-services-first {
+    padding-top: 1.50rem;
+  }
+
+  .container-services-second {
+    padding-top: 1.50rem;
+  }
+
+  .container-services-third {
+    padding-top: 1.50rem;
+    margin-bottom: -5.50rem;
+  }
+
+  .services-icon {
+    text-align: center;
+  }
+
+  .services-p {
+    text-align: center;
+  }
+
+  .services-tips ion-icon {
+    font-size: 4.25rem;
+  }
+
+  .services-tips-img {
+    padding-bottom: 1.50rem;
+  }
+
+  .services-img {
+    width: 240px;
+    height: 220px;
+    border-radius: 1.50rem;
+  }
+
+  .line {
+    width: 100%;
+    height: 2px;
+    border-radius: 20rem;
+    background: #212121;
+  }
   
-/*=============== BENEFITS CLASSES ===============*/
+/*=============== BREAKPOINTS ===============*/
 
   @media (min-width: 576px) and (max-width: 768px) { 
     .container-tips-first {
       padding-top: 1.15rem;
     }
-
     .container-tips-second {
       margin-bottom: -5.15rem;
       padding-top: 1.15rem;
+    }
+    .container-services-first {
+      padding-top: 1.15rem;
+    }
+    .container-services-second {
+      padding-top: 1.15rem;
+    }
+    .container-services-third {
+      margin-bottom: -5.15rem;
+      padding-top: 1.15rem;
+    }
+    .services-img {
+      width: 240px;
+      height: 160px;
     }
   }
