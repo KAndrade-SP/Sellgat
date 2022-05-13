@@ -29,7 +29,7 @@
                 </nav>            
             </header>
 
-            <section id="home">
+            <section class="section-jumbotron " id="home">
                 <div class="jumbotron jumbotron-fluid">
                     <div class="container">
                         <h1 class="display-4">Sellgat</h1>
@@ -42,7 +42,6 @@
             </section>
 
             <section class="section container-section" id="benefits">
-                <h1>Benefícios</h1>
                 <div class="container d-flex justify-content-center container-tips-first">
                     <div class="row">
                       <div class="col-sm">
@@ -107,18 +106,30 @@
                 </div>
             </section>
 
-            <section class="section container-section" id="services">
-                <h1>Serviços</h1>
+            <section class="section-divisor container-section" id="line-section">
+                <div class="container justify-content-center">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-sm">
+                            <div class="divisor">
+                                <div class="divisor-icon">
+                                    <ion-icon name="chevron-down-outline"></ion-icon>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
+            <section class="section container-section" id="services">
                 <div class="container d-flex justify-content-center container-services-first">
                     <div class="row align-items-center">
                         <div class="col-sm">
                             <div class="services-tips">
                                 <div class="services-icon">
-                                    <ion-icon name="hand-left-outline"></ion-icon>
+                                    <ion-icon name="finger-print-outline"></ion-icon>
                                 </div>
                                 <div class="services-p">
-                                    <p>Controle de acesso com cadastro e logs para revisões.</p>
+                                    <p>Interação e gerência de cadastros.</p>
                                 </div>
                             </div>
                         </div>
@@ -127,17 +138,6 @@
                             <div class="services-tips-img">
                                 <div class="services-icon">
                                     <img src="./assets/img/biometria.jpg" class="services-img">
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="col-sm">
-                            <div class="services-tips">
-                                <div class="services-icon">
-                                    <ion-icon name="hand-left-outline"></ion-icon>
-                                </div>
-                                <div class="services-p">
-                                    <p>Controle de acesso com cadastro e logs para revisões.</p>
                                 </div>
                             </div>
                         </div>
@@ -157,17 +157,6 @@
                 <div class="container d-flex justify-content-center container-services-second">
                     <div class="row align-items-center">
                         <div class="col-sm">
-                            <div class="services-tips">
-                                <div class="services-icon">
-                                    <ion-icon name="hand-left-outline"></ion-icon>
-                                </div>
-                                <div class="services-p">
-                                    <p>Controle de acesso com cadastro e logs para revisões.</p>
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="col-sm">
                             <div class="services-tips-img">
                                 <div class="services-icon">
                                     <img src="./assets/img/startup.jpg" class="services-img">
@@ -178,10 +167,10 @@
                         <div class="col-sm">
                             <div class="services-tips">
                                 <div class="services-icon">
-                                    <ion-icon name="hand-left-outline"></ion-icon>
+                                    <ion-icon name="book-outline"></ion-icon>
                                 </div>
                                 <div class="services-p">
-                                    <p>Controle de acesso com cadastro e logs para revisões.</p>
+                                    <p>Acesso rápido e seguro ao livro de ocorrência online.</p>
                                 </div>
                             </div>
                         </div>
@@ -203,10 +192,10 @@
                         <div class="col-sm">
                             <div class="services-tips">
                                 <div class="services-icon">
-                                    <ion-icon name="hand-left-outline"></ion-icon>
+                                    <ion-icon name="checkmark-done-outline"></ion-icon>
                                 </div>
                                 <div class="services-p">
-                                    <p>Controle de acesso com cadastro e logs para revisões.</p>
+                                    <p>Opção para reservas de áreas comuns do condomínio.</p>
                                 </div>
                             </div>
                         </div>
@@ -218,25 +207,63 @@
                                 </div>
                             </div>
                         </div>
-    
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-divisor container-section" id="line-section">
+                <div class="container justify-content-center">
+                    <div class="align-items-center justify-content-center">
                         <div class="col-sm">
-                            <div class="services-tips">
-                                <div class="services-icon">
-                                    <ion-icon name="hand-left-outline"></ion-icon>
-                                </div>
-                                <div class="services-p">
-                                    <p>Controle de acesso com cadastro e logs para revisões.</p>
+                            <div class="divisor">
+                                <div class="divisor-icon">
+                                    <ion-icon name="chevron-down-outline"></ion-icon>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
             </section>
 
             <section class="section container-section" id="app">
-                <h1>Aplicativo</h1>
-
+                <div class="table-wrapper">
+                    <table class="fl-table">
+                        <thead>
+                            <tr>
+                                <th>Serviços</th>
+                                <th>Sellgat</th>
+                                <th>Concorrentes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Alarme monitorado com detector de invasões</td>
+                                <td><ion-icon name="checkmark-outline"></ion-icon></td>
+                                <td><ion-icon name="close-outline"></ion-icon></td>
+                            </tr>
+                            <tr>
+                                <td>Sensor de presença com verificação facial</td>
+                                <td><ion-icon name="checkmark-outline"></ion-icon></td>
+                                <td><ion-icon name="close-outline"></ion-icon></td>
+                            </tr>
+                            <tr>
+                                <td>Automação integrada com câmeras</td>
+                                <td><ion-icon name="checkmark-outline"></ion-icon></td>
+                                <td><ion-icon name="close-outline"></ion-icon></td>
+                            </tr>
+                            <tr>
+                                <td>Compartilhar vídeos via redes sociais</td>
+                                <td><ion-icon name="checkmark-outline"></ion-icon></td>
+                                <td><ion-icon name="close-outline"></ion-icon></td>
+                            </tr>
+                            <tr>
+                                <td>Notificações técnicas por e-mail e celular</td>
+                                <td><ion-icon name="checkmark-outline"></ion-icon></td>
+                                <td><ion-icon name="close-outline"></ion-icon></td>
+                            </tr>
+                        <tbody>
+                    </table>
+                </div>
             </section>
 
             <footer class="footer" id="footer">

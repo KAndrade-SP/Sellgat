@@ -1,3 +1,34 @@
+/*=============== VARIABLES CSS ===============*/
+  :root {
+
+    /*========== Colors ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+    --title-color: hsl(220.91,20.37%,26.82%);
+    --text-color: hsl(215.59,25.76%,15.9%);
+    --body-color: hsl(225,22.22%,92.94%);
+    --container-color: hsl(220,20.55%,85.69%);
+    --title-color-dark: hsl(211.9,50.32%,18.78%);
+    --text-color-dark: hsl(211.9,50.32%,8.78%);
+    --container-color-dark: hsl(227.31,100%,10.2%);
+
+    /*========== Font and typography ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --big-font-size: 1.25rem;
+    --normal-font-size: .930rem;
+    --small-font-size: .810rem;
+
+    /*========== z index ==========*/
+    --z-fixed: 100;
+  }
+
+  @media screen and (min-width: 968px) {
+    :root {
+      --big-font-size: 2rem;
+      --normal-font-size: 1rem;
+      --small-font-size: .875rem;
+    }
+  }
+
 /*=============== BASE ===============*/
 * {
     box-sizing: border-box;
@@ -11,11 +42,13 @@
   }
   
   body {
+    font-size: var(--normal-font-size);
+    color: var(--text-color);
     overflow-x: hidden;
   }
   
   h1, h2, h3 {
-    color: #212121;
+    color: var(--title-color);
   }
   
   ul {
@@ -40,13 +73,42 @@
     padding: 4.5rem 0 1rem;
   }
 
+  .section-divisor {
+    padding: 4.5rem 0 1rem;
+    margin-bottom: -5rem;
+  }
+
+  .section-jumbotron {
+    padding: 2.5rem 0 1rem;
+  }
+
   .container-section {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
   }
 
   .jumbotron {
-    margin-bottom: -2.50rem;
+    margin-bottom: -5rem;
+  }
+
+  .header {
+    width: 100%;
+    background-color: var(--body-color);
+    border-bottom: 1px solid var(--text-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+  }
+
+  .divisor {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .divisor ion-icon {
+    font-size: 3.50rem;
   }
 
 /*=============== BENEFITS CLASSES ===============*/
@@ -112,7 +174,52 @@
     width: 100%;
     height: 2px;
     border-radius: 20rem;
-    background: #212121;
+    background: var(--title-color);
+  }
+
+/*=============== TABLE ===============*/
+  .table-wrapper{
+    padding: 1rem;
+    padding-left: 4.50rem;
+    padding-right: 4.50rem;
+  }
+
+  .fl-table {
+    box-shadow: 0 20px 40px -14px rgba(39,76,118,1);
+    background: linear-gradient(to bottom left, #bec5d4 -2%, #e9ebf1 97%);
+    color: var(--title-color);
+    font-size: var(--small-font-size);
+    border: 1px solid var(--text-color);
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+  }
+
+  .fl-table td, .fl-table th {
+    text-align: center;
+    padding: 16px;
+  }
+
+  .fl-table td {
+    border-right: 1px solid var(--text-color);
+    border-left: 1px solid var(--text-color);
+    font-size: var(--small-font-size);
+  }
+
+  .fl-table td input {
+    background: transparent;
+    font-family: var(--body-font);
+    font-size: var(--small-font-size);
+    color: var(--title-color);
+    border: none;
+    text-align: center;
+  }
+
+  .fl-table thead th {
+    color: var(--title-color);
+    background: var(--container-color);
+    border-bottom: 1px solid var(--text-color);
   }
   
 /*=============== BREAKPOINTS ===============*/
@@ -138,5 +245,68 @@
     .services-img {
       width: 240px;
       height: 160px;
+    }
+  }
+
+  /* Table */
+  @media (max-width: 767px) {
+    .table-wrapper{
+      padding: 1rem;
+      padding-left: -4.50rem;
+      padding-right: -4.50rem;
+    }
+    .fl-table {
+        display: block;
+        width: 100%;
+        padding-top: -3rem;
+    }
+    .fl-table thead, .fl-table tbody, .fl-table thead th {
+        display: block;
+    }
+    .fl-table thead th:last-child{
+        border-bottom: none;
+    }
+    .fl-table thead {
+        border-right: 1px solid var(--text-color);
+        border-bottom: 1px solid var(--text-color);
+        float:left;
+    }
+    .fl-table tbody {
+        width: auto;
+        position: relative;
+        overflow-x: auto;
+    }
+    .fl-table td, .fl-table th {
+        padding: 20px .625em .625em .625em;
+        height: 60px;
+        vertical-align: middle;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 140px;
+        font-size: var(--small-font-size);
+        text-overflow: ellipsis;
+    }
+    .fl-table td input {
+      width: 100%;
+      align-self: center;
+    }
+    .fl-table thead th {
+        text-align: left;
+        width: 100px;
+    }
+    .fl-table tbody tr {
+        display: table-cell;
+    }
+    .fl-table tbody tr:nth-child(odd) {
+        background: none;
+    }
+    .fl-table tr:nth-child(even) {
+        background: transparent;
+    }
+    .fl-table tbody td {
+        display: block;
+        float:inline-end;
+        text-align: center;
     }
   }
