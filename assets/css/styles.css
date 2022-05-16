@@ -1,14 +1,16 @@
 /*=============== VARIABLES CSS ===============*/
   :root {
+    --footer-height: 4.5rem;
 
     /*========== Colors ==========*/
     /*Color mode HSL(hue, saturation, lightness)*/
-    --title-color: hsl(220.91,20.37%,26.82%);
-    --text-color: hsl(215.59,25.76%,15.9%);
+    --title-color: hsl(220.91,20.37%,32.82%);
+    --text-color: hsl(215.59,25.76%,21.9%);
+    --selected-color: hsl(218.18,22.45%,8.61%);
     --body-color: hsl(225,22.22%,92.94%);
     --container-color: hsl(220,20.55%,85.69%);
-    --title-color-dark: hsl(211.9,50.32%,18.78%);
-    --text-color-dark: hsl(211.9,50.32%,8.78%);
+    --title-color-light: hsl(218.18,20.75%,89.61%);
+    --text-color-light: hsl(225,20%,96.08%);
     --container-color-dark: hsl(227.31,100%,10.2%);
 
     /*========== Font and typography ==========*/
@@ -43,6 +45,7 @@
   
   body {
     font-size: var(--normal-font-size);
+    background-color: var(--body-color);
     color: var(--text-color);
     overflow-x: hidden;
   }
@@ -89,6 +92,26 @@
 
   .jumbotron {
     margin-bottom: -5rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.955),rgba(0, 0, 0, 0.5)), url('../img/concierge.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  .jumbotron h1 {
+    color: var(--title-color-light);
+  }
+
+  .jumbotron p {
+    color: var(--text-color-light);
+  }
+
+  .jumbotron button {
+    background-color: var(--body-color);
+  }
+
+  .header__logo {
+    font-weight: 500;
   }
 
   .header {
@@ -101,6 +124,24 @@
     z-index: var(--z-fixed);
   }
 
+  .header ion-icon {
+    color: var(--title-color);
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  .header a {
+    color: var(--title-color);
+  }
+
+  .header a:hover{
+    color: var(--selected-color);
+  }
+
+  .header .active-link {
+    color: var(--selected-color);
+  }
+
   .divisor {
     align-items: center;
     justify-content: center;
@@ -109,6 +150,24 @@
 
   .divisor ion-icon {
     font-size: 3.50rem;
+  }
+
+  .footer {
+    width: 100%;
+    background-color: var(--body-color);
+    border-top: 1px solid var(--text-color);
+    margin-top: 2rem;
+    bottom: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+  }
+  
+  .footer__content {
+    height: var(--footer-height);
+    display: flex;
+    padding-top: 0.50rem;
+    justify-content: center;
+    align-items: center;
   }
 
 /*=============== BENEFITS CLASSES ===============*/
@@ -187,7 +246,7 @@
   .fl-table {
     box-shadow: 0 20px 40px -14px rgba(39,76,118,1);
     background: linear-gradient(to bottom left, #bec5d4 -2%, #e9ebf1 97%);
-    color: var(--title-color);
+    color: var(--text-color);
     font-size: var(--small-font-size);
     border: 1px solid var(--text-color);
     border-collapse: collapse;
@@ -207,13 +266,8 @@
     font-size: var(--small-font-size);
   }
 
-  .fl-table td input {
-    background: transparent;
-    font-family: var(--body-font);
-    font-size: var(--small-font-size);
-    color: var(--title-color);
-    border: none;
-    text-align: center;
+  .fl-table td ion-icon {
+    font-size: var(--big-font-size);
   }
 
   .fl-table thead th {
@@ -308,5 +362,13 @@
         display: block;
         float:inline-end;
         text-align: center;
+    }
+  }
+
+  @media (min-width: 992px) { 
+    .header ion-icon {
+      visibility: hidden;
+      right: 0;
+      position: fixed;
     }
   }
